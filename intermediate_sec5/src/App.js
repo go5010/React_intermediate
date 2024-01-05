@@ -1,12 +1,8 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./Home";
-import { Page1 } from "./Page1";
-import { Page2 } from "./Page2";
-import { Page1DetailA } from "./Page1DetailA";
-import { Page1DetailB } from "./Page1DetailB";
+import { Router } from "./router/Router";
 
 function App() {
   return (
@@ -19,13 +15,7 @@ function App() {
         <Link to="/page2">Page2</Link>
         <br />
       </div>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/page1" element={<Page1 />} />
-        <Route path="/page1/detailA" element={<Page1DetailA />} />
-        <Route path="/page1/detailB" element={<Page1DetailB />} />
-        <Route path="/page2" element={<Page2 />} />
-      </Routes>
+      <Router />
     </BrowserRouter>
   );
 }
