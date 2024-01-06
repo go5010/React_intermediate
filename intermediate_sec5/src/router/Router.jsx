@@ -5,6 +5,7 @@ import { Page2 } from "../Page2";
 import { Page1DetailA } from "../Page1DetailA";
 import { Page1DetailB } from "../Page1DetailB";
 import { UrlParameter } from "../UrlParameter";
+import { Page404 } from "../Page404";
 
 export const Router = () => {
   return (
@@ -15,6 +16,7 @@ export const Router = () => {
       <Route path="/page1/detailB" element={<Page1DetailB />} />
       <Route path="/page2" element={<Page2 />} />
       <Route path="/page2/:id" element={<UrlParameter />} />
+      <Route path="*" element={<Page404 />} />
     </Routes>
   );
 };
